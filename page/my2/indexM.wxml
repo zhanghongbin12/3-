@@ -1,0 +1,19 @@
+ 
+ <view class="page-body">
+    <view class="page-section">
+     
+      <view class="page-section-spacing" style="margin-top:80px;">
+        <scroll-view class="animation-buttons" scroll-y="true"  wx:for-items="{{listData}}" >
+          <block wx:for-items="{{item.list}}">
+                <view class="flex-wrp" style="flex-direction:row;" >
+                  <block wx:for-items="{{item.pageClass}}" >
+                      <view id="{{item.class}}"  class="flex-item {{item.class}}"  bindtap="login" animation="{{item.animation}}"></view>
+                  </block>
+                </view>
+          </block>
+        </scroll-view>
+
+      </view>
+
+    </view>
+  </view>

@@ -1,0 +1,19 @@
+ 
+ <view class="page-body">
+    <view class="page-section">
+     
+      <view class="page-section-spacing" style="margin-top:80px;">
+        <text style="display:block;margin-bottom:30px;text-align:center;width:100%;color:#999;">请在下图中找出数字{{num}}</text>
+
+        <block wx:for-items="{{list}}">
+              <view class="flex-wrp" style="flex-direction:row;">
+                 <block wx:for-items="{{item.pageClass}}" wx:for-item="class">
+                    <view id="{{class}}"  class="flex-item {{class}}"  bindtap="tap"></view>
+                 </block>
+              </view>
+        </block>
+
+      </view>
+
+    </view>
+  </view>
